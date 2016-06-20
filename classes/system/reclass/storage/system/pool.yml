@@ -1,0 +1,57 @@
+parameters:
+  reclass:
+    storage:
+      node:
+        nod01.cloud.company.com:
+          name: nod01
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.glusterfs.storage.keystone
+          - system.glusterfs.storage.glance
+          - system.kubernetes.pool.calico.single
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.7
+        nod02.cloud.company.com:
+          name: nod02
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.glusterfs.storage.keystone
+          - system.glusterfs.storage.glance
+          - system.kubernetes.pool.calico.single
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.8
+        nod03.cloud.company.com:
+          name: nod03
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.glusterfs.storage.keystone
+          - system.glusterfs.storage.glance
+          - system.kubernetes.pool.calico.single
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.9
+        nod04.cloud.company.com:
+          name: nod04
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.kubernetes.pool.calico.single
+          - system.opencontrail.compute.cluster
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.10
+        nod05.cloud.company.com:
+          name: nod05
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.kubernetes.pool.calico.single
+          - system.opencontrail.compute.cluster
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.11

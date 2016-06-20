@@ -1,0 +1,13 @@
+parameters:
+  reclass:
+    storage:
+      node:
+        ctl01.cloud.company.com:
+          name: ctl01
+          domain: cloud.company.com
+          classes:
+          - system.linux.system.single
+          - system.kubernetes.control.single
+          params:
+            salt_master_host: ${_param:reclass_config_master}
+            single_address: 10.10.6.6

@@ -1,0 +1,51 @@
+classes:
+- service.linux.system
+- service.ntp.client
+- service.salt.minion.master
+- system.openssh.server.single
+parameters:
+  linux:
+    system:
+      repo:
+        tcpcloud:
+          source: "deb [arch=amd64] http://apt.tcpcloud.eu/nightly/ trusty main security extra tcp tcp-salt"
+          architectures: amd64
+          default: true
+          key_url: "http://apt.tcpcloud.eu/public.gpg"
+    network:
+      host:
+        cfg01:
+          address: 10.10.6.5
+          names:
+          - cfg01.cloud.company.com
+          - cfg01
+        ctl01:
+          address: 10.10.6.6
+          names:
+          - ctl01.cloud.company.com
+          - ctl01
+        nod01:
+          address: 10.10.6.7
+          names:
+          - nod01.cloud.company.com
+          - nod01
+        nod02:
+          address: 10.10.6.8
+          names:
+          - nod02.cloud.company.com
+          - nod02
+        nod03:
+          address: 10.10.6.9
+          names:
+          - nod03.cloud.company.com
+          - nod03
+        nod04:
+          address: 10.10.6.10
+          names:
+          - nod04.cloud.company.com
+          - nod04
+        nod05:
+          address: 10.10.6.11
+          names:
+          - nod05.cloud.company.com
+          - nod05
